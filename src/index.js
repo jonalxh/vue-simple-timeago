@@ -1,7 +1,7 @@
-import ExampleComponent from './components/ExampleComponent'
+import SimpleTimeAgo from './components/SimpleTimeAgo'
 
 export default {
   install (Vue) {
-    Vue.component('ExampleComponent', ExampleComponent)
+    Vue.component('SimpleTimeAgo', SimpleTimeAgo)
   }
 }
