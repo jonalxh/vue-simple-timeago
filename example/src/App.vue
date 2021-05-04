@@ -1,18 +1,25 @@
 <template>
   <div id="app" class="App">
-    <ExampleComponent>Hello world</ExampleComponent>
+    <SimpleTimeAgo :date="twentyNineSeconds"></SimpleTimeAgo>
+    <SimpleTimeAgo :date="yesterday"></SimpleTimeAgo>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'App'
+  name: 'App',
+  data() {
+    return {
+      twentyNineSeconds: Date.now() - (29 * 1000),
+      yesterday: Date.now() - (1 * 24 * 60 * 60 * 1000),
+    }
+  },
 }
 </script>
 
 <style>
   body {
-    margin: 0;
+    margin: 1em;
   }
 </style>
